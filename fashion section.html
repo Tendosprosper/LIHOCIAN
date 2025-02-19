@@ -266,12 +266,16 @@ body {
     </head>
     <body>
         <script>
-            // Select the toggle button and navigation menu
-            const toggleButton = document.querySelector('.navbar-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            
-            // Toggle menu on
-            </script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleButton = document.querySelector(".navbar-toggle");
+            const navLinks = document.querySelector(".nav-links");
+          
+            toggleButton.addEventListener("click", () => {
+              navLinks.classList.toggle("active");
+            });
+          });
+        </script>
+          
         <h1>Prom network Fashion</h1>
         <div class="gallery">
            
