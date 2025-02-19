@@ -1,223 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prom Network</title>
-    <link rel="stylesheet" href="Prom network.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-    
-        .sticker {
-            position: absolute;
-            transform: rotate(-10deg);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prom Network</title>
+  <link rel="stylesheet" href="Prom network.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .sticker {
+      position: absolute;
+      transform: rotate(-10deg);
+    }
 
-    
-        .video-section {
-            margin-top: 20px;
-            padding: 20px;
-        }
-        video {
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
-        }
-        /* Base Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Responsive Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0px;
-}
+    .video-section {
+      margin-top: 20px;
+      padding: 20px;
+    }
 
-/* Flexible Grid */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+    video {
+      width: 80%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
 
-.col {
-  flex: 1;
-  min-width: 250px;
-}
+    /* Base Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-}
+    /* Responsive Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0px;
+     
+    }
 
-/* Responsive Navigation */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: #333;
-}
+    /* Flexible Grid */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
+    .col {
+      flex: 1;
+      min-width: 250px;
+    }
 
-.nav ul li {
-  display: inline;
-}
+    /* Images */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
-.nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
+    /* Responsive Navigation */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background: #333;
+    }
 
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .nav ul {
-    display: none;
-    flex-direction: column;
-    background: #222;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-  }
+    .nav ul li {
+      display: inline;
+    }
 
-  .nav ul.show {
-    display: flex;
-  }
+    .nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
 
-  .menu-toggle {
-    display: block;
-  }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
 
-  .col {
-    min-width: 100%;
-  }
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .nav ul {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+      }
 
-   
+      .nav ul.show {
+        display: flex;
+      }
 
-        
-    </style>
+      .menu-toggle {
+        display: block;
+      }
+
+      .col {
+        min-width: 100%;
+      }
+  </style>
 </head>
+
 <body class="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-<script>
+  <script>
     function adjustLayout() {
-  const screenWidth = window.innerWidth;
+      const screenWidth = window.innerWidth;
 
-  if (screenWidth < 768) {
-    document.body.style.fontSize = "14px"; // Smaller text on mobile
-  } else {
-    document.body.style.fontSize = "18px"; // Normal size on desktop
-  }
-}
+      if (screenWidth < 768) {
+        document.body.style.fontSize = "14px"; // Smaller text on mobile
+      } else {
+        document.body.style.fontSize = "18px"; // Normal size on desktop
+      }
+    }
 
-// Run on page load and when window resizes
-window.onload = adjustLayout;
-window.onresize = adjustLayout;
+    // Run on page load and when window resizes
+    window.onload = adjustLayout;
+    window.onresize = adjustLayout;
 
-</script>
-    <header class="text-center py-10 relative">
-        <h1 class="text-5xl font-bold">PROM NETWORK</h1>
-        <p class="text-lg mt-3">Make your prom night unforgettable with our decorations</p>
-       
-        </nav>
-    </header>
-    
-    <section class="container mx-auto text-center py-10">
-        <h2 class="text-4xl font-semibold mb-6">Our Services</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div id="photography" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
-                <img src="images/music.jpg" alt="Photography" class="w-full h-40 object-cover rounded">
-                <h3 class="text-2xl font-bold mt-3">Photography</h3>
-                <p>Capture every moment with professional photographers.</p>
-                <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="photography.html">Tap for More</a></button>
-            </div>
-            <div id="catering" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
-                <img src="images/caaat.jpg" alt="Catering" class="w-full h-40 object-cover rounded">
-                <h3 class="text-2xl font-bold mt-3">Catering</h3>
-                <p>Delicious food and beverages for an unforgettable night.</p>
-                <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="catering services.html">Tap for more</a></button>
-            </div>
-            <div id="sound" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
-                <img src="images/dj.jpg" alt="Sound System" class="w-full h-40 object-cover rounded">
-                <h3 class="text-2xl font-bold mt-3">Sound System</h3>
-                <p>High-quality sound system for the best prom vibes.</p>
-                <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="music.html">Tap for more</a></button>
-            </div>
-            <div id="lighting" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
-                <img src="images/light.jpg" alt="Lighting" class="w-full h-40 object-cover rounded">
-                <h3 class="text-2xl font-bold mt-3">Lighting</h3>
-                <p>Stunning lighting effects for a magical ambiance.</p>
-                <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="lights set up.html">Tap for more</a></button>
-            </div>
-            <div id="fashion" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
-                <img src="images/fashion.jpg" alt="Fashion" class="w-full h-40 object-cover rounded">
-                <h3 class="text-2xl font-bold mt-3">Fashion</h3>
-                <p>Get the best prom outfits and styling services.</p>
-                <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="fashion section.html">Tap for more</a></button>
-            </div>
-            <div id="transportation" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
-                <img src="images/car.jpg" alt="Transportation" class="w-full h-40 object-cover rounded">
-                <h3 class="text-2xl font-bold mt-3">Transportation</h3>
-                <p>Arrive in style with luxury transport services.</p>
-                <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="transportation.html">Tap for more</a></button>
-            </div>
-            <div id="cakes" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
-                <img src="images/cake.png" alt="Cake" class="w-full h-40 object-cover rounded">
-                <h3 class="text-2xl font-bold mt-3">Cakes</h3>
-                <p>Take a slice of cake that is going to test like life!</p>
-                <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="cake.html">Tap for More</a></button>
-            </div>
-            <div id="dicoration" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
-                <img src="images/dico.jpg" alt="Dicoration" class="w-full h-40 object-cover rounded">
-                <h3 class="text-2xl font-bold mt-3">Decoration</h3>
-                <p>Party in a luxiry and unique environment.</p>
-                <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="cake.html">Tap for More</a></button>
-            </div>
-            <div id="#Makeup" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
-                <img src="images/makeupa.jpg" alt="Transportation" class="w-full h-40 object-cover rounded">
-                <h3 class="text-2xl font-bold mt-3">Makeup</h3>
-                <p>Arrive in style with luxury transport services.</p>
-                <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="Makeup.html">Tap for more</a></button>
-            </div>
-        </div>
-    </section>
-    
-    <section class="container mx-auto text-center py-10">
-        <h2 class="text-4xl font-semibold mb-6">Prom Highlights</h2>
-        <p class="text-lg">Check out some of the most amazing moments from past proms.</p>
+  </script>
+  <header class="text-center py-10 relative">
+    <h1 class="text-5xl font-bold">PROM NETWORK</h1>
+    <p class="text-lg mt-3">Make your prom night unforgettable with our decorations</p>
+
+    </nav>
+  </header>
+
+  <section class="container mx-auto text-center py-10">
+    <h2 class="text-4xl font-semibold mb-6">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div id="photography" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
+        <img src="images/music.jpg" alt="Photography" class="w-full h-40 object-cover rounded">
+        <h3 class="text-2xl font-bold mt-3">Photography</h3>
+        <p>Capture every moment with professional photographers.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="photography.html">Tap for
+            More</a></button>
+      </div>
+      <div id="catering" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
+        <img src="images/caaat.jpg" alt="Catering" class="w-full h-40 object-cover rounded">
+        <h3 class="text-2xl font-bold mt-3">Catering</h3>
+        <p>Delicious food and beverages for an unforgettable night.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="catering services.html">Tap for
+            more</a></button>
+      </div>
+      <div id="sound" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
+        <img src="images/dj.jpg" alt="Sound System" class="w-full h-40 object-cover rounded">
+        <h3 class="text-2xl font-bold mt-3">Sound System</h3>
+        <p>High-quality sound system for the best prom vibes.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="music.html">Tap for more</a></button>
+      </div>
+      <div id="lighting" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
+        <img src="images/light.jpg" alt="Lighting" class="w-full h-40 object-cover rounded">
+        <h3 class="text-2xl font-bold mt-3">Lighting</h3>
+        <p>Stunning lighting effects for a magical ambiance.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="lights set up.html">Tap for
+            more</a></button>
+      </div>
+      <div id="fashion" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
+        <img src="images/fashion.jpg" alt="Fashion" class="w-full h-40 object-cover rounded">
+        <h3 class="text-2xl font-bold mt-3">Fashion</h3>
+        <p>Get the best prom outfits and styling services.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="fashion section.html">Tap for
+            more</a></button>
+      </div>
+      <div id="transportation" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
+        <img src="images/car.jpg" alt="Transportation" class="w-full h-40 object-cover rounded">
+        <h3 class="text-2xl font-bold mt-3">Transportation</h3>
+        <p>Arrive in style with luxury transport services.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="transportation.html">Tap for
+            more</a></button>
+      </div>
+      <div id="cakes" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
+        <img src="images/cake.png" alt="Cake" class="w-full h-40 object-cover rounded">
+        <h3 class="text-2xl font-bold mt-3">Cakes</h3>
+        <p>Take a slice of cake that is going to test like life!</p>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="cake.html">Tap for More</a></button>
+      </div>
+      <div id="dicoration" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
+        <img src="images/dico.jpg" alt="Dicoration" class="w-full h-40 object-cover rounded">
+        <h3 class="text-2xl font-bold mt-3">Decoration</h3>
+        <p>Party in a luxiry and unique environment.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="cake.html">Tap for More</a></button>
+      </div>
+      <div id="#Makeup" class="bg-white text-black p-6 rounded-lg shadow-lg relative">
+        <img src="images/makeupa.jpg" alt="Transportation" class="w-full h-40 object-cover rounded">
+        <h3 class="text-2xl font-bold mt-3">Makeup</h3>
+        <p>Arrive in style with luxury transport services.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-3 rounded"><a href="Makeup.html">Tap for more</a></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto text-center py-10">
+    <h2 class="text-4xl font-semibold mb-6">Prom Highlights</h2>
+    <p class="text-lg">Check out some of the most amazing moments from past proms.</p>
 
 
-                
-            </div>
-    </section>
 
-    <footer class="text-center py-6 bg-purple-700 mt-10">
-        <h3 class="text-2xl font-bold">Contact Us</h3>
-        <p>Email: tendoprosper28@gmail.com</p>
-        <p>Phone: +256702640109</p>
-        <p>Address: Kampala</p>
-    </footer>
-    
+    </div>
+  </section>
 
-    
+  <footer class="text-center py-6 bg-purple-700 mt-10">
+    <h3 class="text-2xl font-bold">Contact Us</h3>
+    <p>Email: tendoprosper28@gmail.com</p>
+    <p>Phone: +256702640109</p>
+    <p>Address: Kampala</p>
+  </footer>
