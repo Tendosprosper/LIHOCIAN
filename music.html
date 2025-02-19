@@ -145,18 +145,124 @@ img {
     min-width: 100%;
   }
 }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Fluid Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Typography */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Navigation Menu */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #333;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.col {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
 
     </style>
 </head>
-<body>
 <script>
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav ul');
-
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('show');
-});
-</script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav ul');
+  
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+  </script>
     <h1>Music Gallery</h1>
     <div class="gallery">
        
