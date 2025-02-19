@@ -3,408 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion</title>
+    <title>Tendo Fashion</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background: linear-gradient(to right, skyblue, purple);
-                color: white;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-            }
-            .gallery {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 15px;
-                padding: 19px;
-                max-width: 1010px;
-                margin: auto;
-            }
-            .gallery-item {
-                margin-left: 0px;
-                margin-right: 0px;
-                background: rgba(255, 255, 255, 0.2);
-                border-radius: 10px;
-                padding: 10px;
-                text-align: center;
-                box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
-                transition: transform 0.3s;
-            }
-            .gallery-item:hover {
-                transform: scale(1.05);
-            }
-            .gallery-item img {
-                width: 100%;
-                border-radius: 10px;
-            }
-            .add-to-cart {
-                margin-top: 10px;
-                background-color: #ffcc00;
-                color: black;
-                border: none;
-                padding: 10px;
-                border-radius: 5px;
-                cursor: pointer;
-                font-weight: bold;
-            }
-            .video-section {
-            margin-top: 20px;
+        body {
+            background: #121212;
+            color: #ffffff;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #222;
+            color: white;
+        }
+
+        .navbar-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('fashion-banner.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Product Grid */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
             padding: 20px;
         }
-        video {
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
+
+        .product {
+            background: #1e1e1e;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            text-align: center;
         }
-        input{
-            border: black 2px solid;
-            border-radius: 5px;
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
-        /* Base Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Responsive Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px;
-}
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-/* Flexible Grid */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
+            .navbar-toggle {
+                display: block;
+            }
 
-.col {
-  flex: 1;
-  min-width: 250px;
-}
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #333;
+            }
 
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-}
+            .nav-links a {
+                padding: 12px;
+                display: block;
+            }
 
-/* Responsive Navigation */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: #333;
-}
+            .nav-links.active {
+                display: flex;
+            }
 
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
+            .products {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-toggle">&#9776;</span>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
 
-.nav ul li {
-  display: inline;
-}
+    <header class="hero">Welcome to Tendo Fashion</header>
 
-.nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
+    <section class="products">
+        <div class="product">
+            <img src="/images/shoes11.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt12.jpg" alt="Elegant Suit">
+            <h3>Elegant Suit</h3>
+        </div>
+        <div class="product">
+            <img src="images/pant12.jpg" alt="Casual Wear">
+            <h3>Casual Wear</h3>
+        </div>
+        <div class="product">
+            <img src="images/suit1.jpg" alt="Stylish Jacket">
+            <h3>Stylish Jacket</h3>
+        </div>
+        <div class="product">
+            <img src="images/shoes21.jpg" alt="Classic Jeans">
+            <h3>Classic Jeans</h3>
+        </div>
+        <div class="product">
+            <img src="images/shoes27.jpg" alt="Cool T-Shirt">
+            <h3>Cool T-Shirt</h3>
+        </div>
+        <div class="product">
+            <img src="images/pant8.jpg" alt="Fashionable Shoes">
+            <h3>Fashionable Shoes</h3>
+        </div>
+        <div class="product">
+            <img src="images/pant5.jpg" alt="Comfy Hoodie">
+            <h3>Comfy Hoodie</h3>
+        </div>
+        <div class="product">
+            <img src="images/suit2.jpg" alt="Stylish Hat">
+            <h3>Stylish Hat</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt17.jpg" alt="Elegant Scarf">
+            <h3>Elegant Scarf</h3>
+        </div>
+    </section>
 
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .nav ul {
-    display: none;
-    flex-direction: column;
-    background: #222;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav ul.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .col {
-    min-width: 100%;
-  }
-  /* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Responsive Container */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Fluid Images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Responsive Typography */
-body {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Navigation Menu */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: #333;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.navbar-toggle {
-  display: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-/* Responsive Grid */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.col {
-  flex: 1;
-  min-width: 250px;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media screen and (max-width: 1024px) {
-  .container {
-    max-width: 90%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-links a {
-    padding: 10px;
-    display: block;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  .container {
-    padding: 0 10px;
-  }
-}
-
-}
-
-
-        </style>
-    </head>
-    <body>
-        <script>
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             const toggleButton = document.querySelector(".navbar-toggle");
             const navLinks = document.querySelector(".nav-links");
-          
-            toggleButton.addEventListener("click", () => {
-              navLinks.classList.toggle("active");
-            });
-          });
-        </script>
-          
-        <h1>Prom network Fashion</h1>
-        <div class="gallery">
-           
-            <div class="gallery">
-                <div class="gallery-item"><img src="images/pant1.jpg" alt="Music Sticker 1">
-                    <p>Penim Gean panty</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant2.jpg" alt="Music Sticker 2">
-                    <p>Penim blue gean Pants</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant3.jpg" alt="Music Sticker 3">
-                    <p>Calvin klain gean pants</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant4.jpg" alt="Music Sticker 4">
-                    <p>Louise Vouiton gean pants</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant5.jpg" alt="Music Sticker 5">
-                    <p>Dior pants</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant6.jpg" alt="Music Sticker 6">
-                    <p>Dior pants</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant7.jpg" alt="Music Sticker 7">
-                    <p>Christian Dior pants</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant8.jpg" alt="Music Sticker 8">
-                    <p>Paris pants</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant9.jpg" alt="Music Sticker 9">
-                    <p>Black gentel pants</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant10.jpg" alt="Music Sticker 10">
-                    <p>White gentle pants</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant11.jpg" alt="Music Sticker 11">
-                    <p>Red gentel pants</p><button class="add-to-cart">Add to Chart</button></div>
-                <!-- <div class="gallery-item"><img src="simages/shoes15.jpg" alt="Music Sticker 12"><button class="add-to-cart">Add to Chart</button></div> -->
-                <div class="gallery-item"><img src="images/pant24.jpg" alt="Music Sticker 13">
-                    <p>Pants </p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt1.jpg" alt="Music Sticker 14">
-                    <p>Striped T-shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt2.jpg" alt="Music Sticker 15">
-                    <p>Shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt3.jpg" alt="Music Sticker 16">
-                    <p>clean shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt4.jpg" alt="Music Sticker 17">
-                    <p>clean shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt6.jpg" alt="Music Sticker 18">
-                    Addidas shirts<button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt7.jpg" alt="Music Sticker 19">
-                    <p>shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt8.jpg" alt="Music Sticker 20">
-                    <p>Colored pocked shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant9.jpg" alt="Music Sticker 21">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt10.jpg" alt="Music Sticker 22">
-                    <p>Amiri shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt11.jpg" alt="Music Sticker 23">
-                    <p>Raiders shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt12.jpg" alt="Music Sticker 24">
-                    <p>Clean shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt13.jpg" alt="Music Sticker 25">
-                    <p>Stripped shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt14.jpg" alt="Music Sticker 26">
-                    <p>Cargo shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt15.jpg" alt="Music Sticker 27">
-                    <p>Ferrando Cargo T-shirts</p><button class="add-to-cart">Add to Chart</button></div>
-                <!-- <div class="gallery-item"><img src="simages/st1.jpg" alt="Music Sticker 28"><button class="add-to-cart">Add to Chart</button></div> -->
-                <div class="gallery-item"><img src="images/st2.jpg" alt="Music Sticker 29">
-                    <p>Shorts</p><button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shoes21.jpg" alt="Music Sticker 30">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/st2.jpg" alt="Music Sticker 31">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt22.jpg" alt="Music Sticker 32">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant12.jpg" alt="Music Sticker 33">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt7.jpg" alt="Music Sticker 34">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shoes15.jpg" alt="Music Sticker 35">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt22.jpg" alt="Music Sticker 36">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant24.jpg" alt="Music Sticker 37">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt11.jpg" alt="Music Sticker 38">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant10.jpg" alt="Music Sticker 39">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/suit1.jpg" alt="Music Sticker 40">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt13.jpg" alt="Music Sticker 41">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shoes15.jpg" alt="Music Sticker 10">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/st1.jpg" alt="Music Sticker 11">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="simages/shirt5.jpg" alt="Music Sticker 12">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt19.jpg" alt="Music Sticker 13">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shoes222.jpg" alt="Music Sticker 14">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/st2.jpg" alt="Music Sticker 15">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt22.jpg" alt="Music Sticker 16">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/pant12.jpg" alt="Music Sticker 17">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt7.jpg" alt="Music Sticker 18">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shoes15.jpg" alt="Music Sticker 19">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt22.jpg" alt="Music Sticker 20">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt7.jpg" alt="Music Sticker 18">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shoes15.jpg" alt="Music Sticker 19">
-                    <button class="add-to-cart">Add to Chart</button></div>
-                <div class="gallery-item"><img src="images/shirt22.jpg" alt="Music Sticker 20">
-                    <button class="add-to-cart">Add to Chart</button></div>
-            </div>
-                
-    
-                
-            
-        </div>
-        
-        <div class="video-section">
-            <h2>Music Video Showcase</h2>
-            <video controls>
-                <source src="Alan Walker - Alone.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
 
-    </body>
-    </html>
-    
+            toggleButton.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 </html>
