@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prom Network</title>
+    <title>Tendo Fashion</title>
     <style>
         /* General Reset */
         * {
@@ -68,16 +68,22 @@
 
         .product {
             background: #1e1e1e;
-            padding: 5px;
+            padding: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
             text-align: center;
+            transition: transform 0.3s ease-in-out;
         }
 
         .product img {
             width: 100%;
             height: auto;
             border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover img {
+            transform: scale(1.1);
         }
 
         /* Responsive Design */
@@ -108,7 +114,7 @@
             }
 
             .products {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(1, 1fr);
             }
         }
     </style>
@@ -124,11 +130,11 @@
         </div>
     </nav>
 
-    <header class="hero">Prom Network Fashion</header>
+    <header class="hero">Welcome to Tendo Fashion</header>
 
     <section class="products">
         <div class="product">
-            <img src="/images/shoes11.jpg" alt="Trendy Dress">
+            <img src="images/shoes41.jpg" alt="Trendy Dress">
             <h3>Trendy Dress</h3>
         </div>
         <div class="product">
@@ -136,35 +142,35 @@
             <h3>Elegant Suit</h3>
         </div>
         <div class="product">
-            <img src="images/pant12.jpg" alt="Casual Wear">
+            <img src="images/shirt10.jpg" alt="Casual Wear">
             <h3>Casual Wear</h3>
         </div>
         <div class="product">
-            <img src="images/suit1.jpg" alt="Stylish Jacket">
+            <img src="images/shirt18.jpg" alt="Stylish Jacket">
             <h3>Stylish Jacket</h3>
         </div>
         <div class="product">
-            <img src="images/shoes21.jpg" alt="Classic Jeans">
+            <img src="images/pant11.jpg" alt="Classic Jeans">
             <h3>Classic Jeans</h3>
         </div>
         <div class="product">
-            <img src="images/shoes27.jpg" alt="Cool T-Shirt">
+            <img src="images/pant24.jpg" alt="Cool T-Shirt">
             <h3>Cool T-Shirt</h3>
         </div>
         <div class="product">
-            <img src="images/pant8.jpg" alt="Fashionable Shoes">
+            <img src="images/shoes.jpg" alt="Fashionable Shoes">
             <h3>Fashionable Shoes</h3>
         </div>
         <div class="product">
-            <img src="images/pant5.jpg" alt="Comfy Hoodie">
+            <img src="images/pant7.jpg" alt="Comfy Hoodie">
             <h3>Comfy Hoodie</h3>
         </div>
         <div class="product">
-            <img src="images/suit2.jpg" alt="Stylish Hat">
+            <img src="images/suit1.jpg" alt="Stylish Hat">
             <h3>Stylish Hat</h3>
         </div>
         <div class="product">
-            <img src="images/shirt17.jpg" alt="Elegant Scarf">
+            <img src="images/suit2.jpg" alt="Elegant Scarf">
             <h3>Elegant Scarf</h3>
         </div>
     </section>
