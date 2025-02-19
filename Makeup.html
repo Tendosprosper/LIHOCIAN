@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, rgb(0, 0, 0), rgb(30, 2, 30));
+            color: white;
+            font-family: monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .add-to-cart {
+            margin-top: 10px;
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .video-section {
+            margin-top: 20px;
+            padding: 20px;
+        }
+        video {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Makeup</h1>
+    <div class="gallery">
+       
+        <div class="gallery">
+            <div class="gallery-item"><img src="images/makeup1.jpg" alt="Music Sticker 1"><button class="add-to-cart">Add to Chart</button></div>
+            <div class="gallery-item"><img src="images/makeup2.jpg" alt="Music Sticker 2"><button class="add-to-cart">Add to Chart</button></div>
+            <div class="gallery-item"><img src="images/makeup7.jpg" alt="Music Sticker 4"><button class="add-to-cart">Add to Chart</button></div>
+            <div class="gallery-item"><img src="images/makeup4.jpg" alt="Music Sticker 5"><button class="add-to-cart">Add to Chart</button></div>
+            <div class="gallery-item"><img src="images/makeup5.jpg" alt="Music Sticker 6"><button class="add-to-cart">Add to Chart</button></div>
+            <div class="gallery-item"><img src="images/makeup5.jpg" alt="Music Sticker 7"><button class="add-to-cart">Add to Chart</button></div>
+            <div class="gallery-item"><img src="images/makeup6.jpg" alt="Music Sticker 8"><button class="add-to-cart">Add to Chart</button></div>
+           
+        </div>
+            
+
+            
+        </script>
+    </div>
+    
+    <div class="video-section">
+        <h2>Music Video Showcase</h2>
+        <video controls>
+            <source src="Alan Walker - Alone.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>
