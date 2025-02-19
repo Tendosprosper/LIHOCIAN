@@ -3,196 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Gallery</title>
+    <title>Prom Network music</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, skyblue, purple);
-            color: white;
-            text-align: center;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
+
+        body {
+          background: linear-gradient(to right, rgb(28, 1, 1), rgb(36, 2, 19));
+            color: #ffffff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             padding: 20px;
-            max-width: 1200px;
-            margin: auto;
         }
-        .gallery-item {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
+
+        .photo {
+            background: #1e1e1e;
             padding: 10px;
-            text-align: center;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
-            transition: transform 0.3s;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
-        .gallery-item:hover {
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .photo:hover {
             transform: scale(1.05);
         }
-        .gallery-item img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .add-to-cart {
-            margin-top: 10px;
-            background-color: #ffcc00;
-            color: black;
+
+        .book-now {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 15px;
+            background: #ff5722;
+            color: white;
             border: none;
-            padding: 10px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
+            transition: background 0.3s ease-in-out;
         }
-        .video-section {
-            margin-top: 20px;
-            padding: 20px;
+
+        .book-now:hover {
+            background: #e64a19;
         }
-        video {
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
+
+        .camera-sticker {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            animation: moveCamera 3s infinite alternate ease-in-out;
         }
-        /* Base Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Responsive Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px;
-}
+        @keyframes moveCamera {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
 
-/* Flexible Grid */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
-.col {
-  flex: 1;
-  min-width: 250px;
-}
-
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Responsive Navigation */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: #333;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav ul li {
-  display: inline;
-}
-
-.nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .nav ul {
-    display: none;
-    flex-direction: column;
-    background: #222;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav ul.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .col {
-    min-width: 100%;
-  }
-}
-
+        @media screen and (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
     </style>
 </head>
-<script>
-// Select the toggle button and navigation menu
-const toggleButton = document.querySelector('.navbar-toggle');
-const navLinks = document.querySelector('.nav-links');
+<body>
+    <h1>Prom Network Music</h1>
+    <p>Capture your best moments with us!</p>
 
-// Toggle menu on
-</script>
-
-    <h1>Music Gallery</h1>
-    <div class="gallery">
-       
-        <div class="gallery">
-            <div class="gallery-item"><img src="images/deejay.jpg" alt="Music Sticker 1"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="images/nott.webp" alt="Music Sticker 2"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="images/deejay.jpg" alt="Music Sticker 3"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker4.jpg" alt="Music Sticker 4"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker5.jpg" alt="Music Sticker 5"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker6.jpg" alt="Music Sticker 6"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker7.jpg" alt="Music Sticker 7"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker8.jpg" alt="Music Sticker 8"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker9.jpg" alt="Music Sticker 9"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker10.jpg" alt="Music Sticker 10"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker11.jpg" alt="Music Sticker 11"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker12.jpg" alt="Music Sticker 12"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker13.jpg" alt="Music Sticker 13"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker14.jpg" alt="Music Sticker 14"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker15.jpg" alt="Music Sticker 15"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker16.jpg" alt="Music Sticker 16"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker17.jpg" alt="Music Sticker 17"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker18.jpg" alt="Music Sticker 18"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker19.jpg" alt="Music Sticker 19"><button class="add-to-cart">Add to Chart</button></div>
-            <div class="gallery-item"><img src="sticker20.jpg" alt="Music Sticker 20"><button class="add-to-cart">Add to Chart</button></div>
+    <section class="gallery">
+        <div class="photo">
+            <img src="images/dj.jpg" alt="Photo 1">
+            <button class="book-now">Book Now</button>
         </div>
-            
+        <div class="photo">
+            <img src="images/dico.jpg" alt="Photo 2">
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="photo">
+            <img src="images/deejay.jpg" alt="Photo 3">
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="photo">
+            <img src="images/makeup4.jpg" alt="Photo 4">
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="photo">
+            <img src="images/makeup5.jpg" alt="Photo 5">
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="photo">
+            <img src="images/makeup6.jpg" alt="Photo 6">
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="photo">
+            <img src="photo7.jpg" alt="Photo 7">
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="photo">
+            <img src="images/makeupa.jpg" alt="Photo 8">
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="photo">
+            <img src="photo9.jpg" alt="Photo 9">
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="photo">
+            <img src="photo10.jpg" alt="Photo 10">
+            <button class="book-now">Book Now</button>
+        </div>
+    </section>
 
-            
-        </script>
-    </div>
-    
-    <div class="video-section">
-        <h2>Music Video Showcase</h2>
-        <video controls>
-            <source src="Alan Walker - Alone.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+    <img src="camera-sticker.png" alt="Camera Sticker" class="camera-sticker">
 </body>
 </html>
