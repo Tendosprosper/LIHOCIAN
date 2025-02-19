@@ -148,6 +148,14 @@ img {
     </style>
 </head>
 <body>
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav ul');
+
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
+</script>
     <h1>Lights Setup Gallery</h1>
     <div class="gallery">
         <div class="gallery-item"><img src="images/mus" alt="Music Sticker 1"><button class="add-to-cart">Add to Chart</button></div>

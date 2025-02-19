@@ -36,14 +36,14 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0px;
 }
 
 /* Flexible Grid */
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
 }
 
 .col {
@@ -113,31 +113,33 @@ img {
   .col {
     min-width: 100%;
   }
-}
+
    
 
         
     </style>
 </head>
 <body class="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-    
-    
+<script>
+    function adjustLayout() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 768) {
+    document.body.style.fontSize = "14px"; // Smaller text on mobile
+  } else {
+    document.body.style.fontSize = "18px"; // Normal size on desktop
+  }
+}
+
+// Run on page load and when window resizes
+window.onload = adjustLayout;
+window.onresize = adjustLayout;
+
+</script>
     <header class="text-center py-10 relative">
         <h1 class="text-5xl font-bold">PROM NETWORK</h1>
         <p class="text-lg mt-3">Make your prom night unforgettable with our decorations</p>
-        <nav class="mt-5">
-            <ul class="flex justify-center space-x-6">
-                <li><a href="#photography" class="hover:font-size: larger;
-                    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);">Photography</a></li>
-                <li><a href="#catering" class="hover:box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);">Catering</a></li>
-                <li><a href="#sound" class="hover:box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);">Sound System</a></li>
-                <li><a href="#lighting" class="hover:box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);">Lighting</a></li>
-                <li><a href="#fashion" class="hover:box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);">Fashion</a></li>
-                <li><a href="#transportation" class="hover:box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);">Transportation</a></li>
-                <li><a href="#cakes" class="hover:box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);">Cakes</a></li>
-                <li><a href="#dicoration" class="hover:box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);">Dicoration</a></li>
-                <li><a href="#Makeup" class="hover:box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);">Makeup</a></li>
-            </ul>
+       
         </nav>
     </header>
     
