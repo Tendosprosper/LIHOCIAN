@@ -12,13 +12,17 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
+            padding: 10px;
         }
         .container {
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
         }
         input, textarea, button {
             width: 100%;
@@ -26,6 +30,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-sizing: border-box;
         }
         button {
             background: #28a745;
@@ -41,7 +46,7 @@
 <body>
     <div class="container">
         <h2>Order Inquiry</h2>
-        <form action="https://formsubmit.co/YOUR_GMAIL_HERE" method="POST">
+        <form action="https://formsubmit.co/tendoprosper28@gmail.com" method="POST">
             <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
             <input type="text" name="location" placeholder="Your Location" required>
             <textarea name="material" placeholder="Material You Want to Buy" required></textarea>
