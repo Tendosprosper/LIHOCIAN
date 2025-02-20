@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input, textarea, button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Order Inquiry</h2>
+        <form action="https://formsubmit.co/YOUR_GMAIL_HERE" method="POST">
+            <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
+            <input type="text" name="location" placeholder="Your Location" required>
+            <textarea name="material" placeholder="Material You Want to Buy" required></textarea>
+            <input type="text" name="availability" placeholder="When You Can Receive It" required>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
