@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prom Network Swag Outfits </title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, rgb(28, 1, 1), rgb(1, 8, 71));
+            color: #ffffff;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #222;
+            color: white;
+        }
+
+        .navbar-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('fashion-banner.jpg') no-repeat center center/cover;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        p{
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: rgba(245, 136, 136, 0.584);
+            font-size: 2em;
+            font-weight: light;
+
+        }
+
+        /* Product Grid */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .product {
+            background: #1e1e1e;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover img {
+            transform: scale(1.);
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px;
+            text-align: center;
+            color: white;
+            margin-top: 5px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #333;
+            }
+
+            .nav-links a {
+                padding: 12px;
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <header class="hero">Prom Network Swag Outfits</header>
+    <p>Make a choice</p>
+
+    <section class="products">
+        <div class="product">
+            <img src="images/pant1.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/pant2.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/pant3.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/pant4.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/pant5.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/pant6.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/pant7.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/pant8.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt1.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt2.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt3.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt4.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt5.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt6.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt7.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt8.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt9.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt10.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/shirt11.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+        <div class="product">
+            <img src="images/st1.jpg" alt="Trendy Dress">
+            <h3>Trendy Dress</h3>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleButton = document.querySelector(".navbar-toggle");
+            const navLinks = document.querySelector(".nav-links");
+
+            toggleButton.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+       <div class="footer">
+        <p>Contact us: tendoprosper28@gmail.com | Made by TENDOS tech</p>
+    </div>
+</body>
+</html>
