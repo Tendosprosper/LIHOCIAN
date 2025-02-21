@@ -3,56 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Quick Order Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            padding: 10px;
+            background: #ffffff;
         }
         .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-            box-sizing: border-box;
+            background: rgb(209, 28, 28);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
         }
-        input, textarea, button {
+        .logo {
+            max-width: 200px;
+            margin-bottom: 5px;
+        }
+        input, select {
             width: 100%;
-            margin-top: 10px;
-            padding: 10px;
+            padding: 6px;
+            margin: 5px 0;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
+            border-radius: 4px;
+            font-size: 14px;
         }
         button {
-            background: #28a745;
+            background: #05eb3b;
             color: white;
+            padding: 10px;
             border: none;
+            border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
+            width: 100%;
         }
         button:hover {
-            background: #218838;
+            background: #f21e02;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Order Inquiry</h2>
-        <form action="https://formsubmit.co/tendoprosper28@gmail.com" method="POST">
-            <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
-            <input type="text" name="location" placeholder="Your Location" required>
-            <textarea name="material" placeholder="Material You Want to Buy" required></textarea>
-            <input type="text" name="availability" placeholder="When You Can Receive It" required>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
+
+<div class="container">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h3>Order Now</h3>
+    <form action="https://formsubmit.co/tendoprosper28@gmail.com" method="POST">
+        <input type="text" name="product" placeholder="Product Name" required>
+        <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required>
+        <select name="buy_rent" required>
+            <option value="" disabled selected>Buy or Rent?</option>
+            <option value="buy">Buy</option>
+            <option value="rent">Rent</option>
+        </select>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="location" placeholder="Location" required>
+        <input type="date" name="date" required>
+        <button type="submit">Submit</button>
+        
+        <input type="hidden" name="_subject" value="New Order Received!">
+        <input type="hidden" name="_captcha" value="false">
+    </form>
+</div>
+
 </body>
 </html>
